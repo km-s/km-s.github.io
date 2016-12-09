@@ -1,0 +1,87 @@
+		body{
+			font-family: sans-serif;
+			font-size: 21px;
+			margin: 0px;
+			}
+
+		#page-title{
+			background-color: lightblue;
+			width: 920px;
+			text-align: center;
+			margin-top: 1px;
+			margin-bottom: 1px;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 5px;
+			max-width: 90%;
+			max-height: 100%;
+		}
+
+		#the-text{
+			background-color: lightgrey;
+			width: 920px;
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 1px;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 5px;
+			max-width: 90%;
+			max-height: 100%;
+			}
+
+		ul.navbar {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    background-color: #333;
+		    margin-bottom: 20px;
+		}
+
+		/* float the list items side by side */
+		ul.navbar li {float: left;}
+
+		/* style the links inside the list item */
+		ul.navbar li a {
+		    display: inline-block; /*allows them to be displayed next to eachother whilst remaining seperate elements */
+		    color: #f2f2f2;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		    transition: 0.5s;
+		    font-size: 17px;
+		}
+
+		/* change background color of links on hover */
+		ul.navbar li a:hover {background-color: #555;}
+
+		/* hide the list item that contains the link that should open and close the navbar on small screens */
+		ul.navbar li.icon {display: none;}
+
+		/* when the screen is less than 680 pixels wide, hide all list items, except for the first one ("kmshaw.net"). show the list item that contains the link to open and close the navbar (li.icon) */
+		@media screen and (max-width:680px) {
+		  ul.navbar li:not(:first-child) {display: none;}
+		  ul.navbar li.icon {
+		    float: right;
+		    display: inline-block;
+		  }
+		}
+
+		/* the "responsive" class is added to the navbar with javascript when the user clicks on the icon;  also makes the navbar look better on smaller screens */
+		@media screen and (max-width:680px) {
+		  ul.navbar.responsive {position: relative;}
+		  ul.navbar.responsive li.icon {
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		  }
+		  ul.navbar.responsive li {
+		    float: none;
+		    display: inline;
+		  }
+		  ul.navbar.responsive li a {
+		    display: block;
+		    text-align: left;
+		  }
+		}
