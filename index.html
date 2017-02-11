@@ -2,76 +2,37 @@
 <html>
 
 <head>
-	<title>kmshaw.net - home</title>
+	<title>kmshaw - test page</title>
 
-	<style>
-		body{
-			font-family: sans-serif;
-			font-size: 21px;
-			}
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-		a{
-			color: green;
-			text-decoration:none;
-		}
-
-		a:hover{
-			color: red;
-		}
-
-		#page-title{
-			background-color: lightblue;
-			width: 50%;
-			text-align: center;
-			margin: auto;
-			position: relative;
-			top: 20px;
-		}
-
-		#the-div{
-			background-color: lightgrey;
-			width: 45%;
-			margin: auto;
-			padding-top: 1px;
-			padding-bottom: 1px;
-			padding-left: 10px;
-			padding-right: 10px;
-			text-align: center;
-			position: relative;
-			top: 50px;
-			}
-
-		#sidebar{
-			background-color: lightgrey;
-			float: right;
-			padding-left: 15px;
-			padding-right: 15px;
-			padding-bottom: 15px;
-			text-align: left;
-			position: relative;
-			top: 20px;
-			clear: both;
-			z-index: 1;
-		}
-
-	</style>
-
+	<script type="text/javascript">
+	function menuResponse() {
+    	var x = document.getElementById("page-navbar");
+    	if (x.className === "navbar") {
+        	x.className += " responsive";
+    	} 
+    	else {
+        	x.className = "navbar";
+    	}
+	}
+	</script>
 </head>
+
 
 <body>
 
-	<div id="sidebar">
-	<h2>Quick Links</h2>
-	<a href="index.html">Home</a>
-	<br>
-	<a href="test.html">Test Page</a>
-	</div>
+<ul class="navbar" id="page-navbar">
+	<li><a href="index.html">kmshaw.net</a></li>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="test.html">Test Page</a></li>
+	<li class="icon">
+    	<a href="javascript:void(0);" onclick="menuResponse()">&#9776;</a>
+  	</li>
+</ul>
 
-	<h1 id="page-title">Welcome to kmshaw.net</h1>
-	<div id="the-div">
-	<p id="the-div-text">Hi there and welcome to the site. The site's currently under construction, but you're free to check out the test page which is where I experiment with html/css and new page designs.</p>
-	</div>
+<h1 id="page-title">Welcome to kmshaw.net</h1>
+<p id="the-text">Hi there and welcome to the site. The site's currently under construction, so there's not much to see right now, but you're free to check out the test page where I experiment with HTML/CSS and new page designs.</p>
 
 </body>
-
 </html>
